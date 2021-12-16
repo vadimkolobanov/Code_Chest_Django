@@ -37,6 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'main',
+    'users',
+    'rest_framework',
+    'django_filters',
 ]
 
 MIDDLEWARE = [
@@ -123,3 +127,9 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+
+# МОИ НАСТРОЙКИ
+
+AUTH_USER_MODEL = 'users.User'
