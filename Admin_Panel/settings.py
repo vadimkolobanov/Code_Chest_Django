@@ -15,18 +15,16 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-f_i+)kztnf^6(zk&)67zw)mxcc5ifi3ah5$x-w38-lyef241kz'
+SECRET_KEY = '-f_i+)kztnf^6(zk&)67zw)mxcc5ifi3ah5$x-w38-lyef241kz'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
 
-ALLOWED_HOSTS = []
 
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -41,10 +39,14 @@ INSTALLED_APPS = [
     'users',
     'rest_framework',
     'django_filters',
+    'whitenoise',
+    'gunicorn',
+
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -79,8 +81,12 @@ WSGI_APPLICATION = 'Admin_Panel.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd63vrlqdd4n6cv',
+        'USER': 'mkuaedveboclyv',
+        'PASSWORD': 'fe4c12212281ce0ac0d4d341866dd91995f137779642e09aad7d48d7b9bb5a04',
+        'HOST': 'ec2-63-33-14-215.eu-west-1.compute.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
@@ -107,7 +113,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru-ru'
 
 TIME_ZONE = 'UTC'
 
@@ -128,8 +134,18 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
-
 # МОИ НАСТРОЙКИ
 
 AUTH_USER_MODEL = 'users.User'
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
+SECURE_SSL_REDIRECT = True
+SECURE_HSTS_SECONDS = 31536000
+SECURE_HSTS_PRELOAD = True
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+DEBUG = False
+
+import dj_database_url
+
+prod_db = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(prod_db)
