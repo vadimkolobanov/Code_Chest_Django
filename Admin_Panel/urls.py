@@ -6,4 +6,5 @@ urlpatterns = [
     path('api-auth/', include('rest_framework.urls')),
     path('api/', include('Admin_Panel.routers')),
     path('', include('main.urls')),
+
 ]
