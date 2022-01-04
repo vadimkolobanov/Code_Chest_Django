@@ -16,5 +16,5 @@ class ProjectsLanguageLevelFiltersView(ListAPIView):
 
         return Project.objects.filter(
             Q(programming_language__icontains=language) &
-            Q(level__icontains=level)
+            Q(level__icontains=level) & Q(check=True)
         )
