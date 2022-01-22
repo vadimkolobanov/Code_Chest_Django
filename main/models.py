@@ -34,6 +34,8 @@ class Project(models.Model):
                                             max_length=50, default=NO)
     check = models.BooleanField(default=False, name='check')
     date_created = models.DateTimeField(auto_now_add=True)
+    id_telegram = models.CharField(max_length=15, null=True, blank=True)
+    username = models.CharField(max_length=30, null=True, blank=True)
     is_active = models.BooleanField(default=True, name='is_active')
 
     class Meta:
