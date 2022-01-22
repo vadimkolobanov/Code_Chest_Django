@@ -7,7 +7,7 @@ class ProjectModelSerializer(HyperlinkedModelSerializer):
     class Meta:
         model = Project
         fields = ['id', 'name', 'description', 'level',
-                  'programming_language', 'check', 'date_created',
+                  'programming_language', 'check', 'date_created','id_telegram','username'
                   'is_active']
 
     def create(self, validated_data):
