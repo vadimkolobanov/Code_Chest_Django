@@ -2,4 +2,18 @@
 
 {% block title %}Code Chest{% endblock %}
 
-{% block content %}<h1>Code Chest Admin and API</h1>{% endblock %}
+{% block content %}
+    {% if user.is_authenticated %}
+        <h5><a href="{% url 'users:logout' %}">Выйти</a></h5>
+
+        <h1>Code Chest Admin and API</h1>
+        <p> Привет, {{ user.username }}</p>
+    {% else %}
+        <h5><a href="{% url 'users:login' %}">Войдите для продолжения</a> или <a href="{% url 'users:register' %}">зарегистрируйтесь!</a>
+        </h5>
+
+
+        <h1>Code Chest Admin and API</h1>
+
+    {% endif %}
+{% endblock %}

@@ -15,7 +15,10 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# main
+# ____________________
 STATIC_URL = '/static/'
+# _____________________
 
 # Extra places for collectstatic to find static files.
 STATICFILES_DIRS = (
@@ -81,20 +84,32 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'Admin_Panel.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+# main 
+# _____________________
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'd53h1rkf6r67o3',
-        'USER': 'dybjzuqpsnzdmf',
-        'PASSWORD': 'dc9676a2b5e9e4a7641ee4f9546b7cbfb62c2d28441c6123366e5c984d4e30aa',
-        'HOST': 'ec2-54-220-243-77.eu-west-1.compute.amazonaws.com',
+        'NAME': 'd63vrlqdd4n6cv',
+        'USER': 'mkuaedveboclyv',
+        'PASSWORD': 'fe4c12212281ce0ac0d4d341866dd91995f137779642e09aad7d48d7b9bb5a04',
+        'HOST': 'ec2-63-33-14-215.eu-west-1.compute.amazonaws.com',
         'PORT': '5432',
     }
 }
+# ______________________
+
+# work
+# ______________________
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+# _______________________
 
 
 # Password validation
@@ -133,7 +148,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-STATIC_URL = '/static/'
+# STATIC_URL = '/static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
@@ -143,12 +158,26 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # МОИ НАСТРОЙКИ
 
 AUTH_USER_MODEL = 'users.User'
+
+# work 
+# ________________
+# LOGIN_REDIRECT_URL = '/'
+# LOGIN_URL = 'login'
+# LOGOUT_REDIRECT_URL = 'logout'
+# DEBUG = True
+# ________________
+
+# main
+# ________________
 CSRF_COOKIE_SECURE = True
 SESSION_COOKIE_SECURE = True
 SECURE_SSL_REDIRECT = True
 SECURE_HSTS_SECONDS = 31536000
 SECURE_HSTS_PRELOAD = True
 SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+LOGIN_REDIRECT_URL = '/'
+LOGIN_URL = 'login'
+LOGOUT_REDIRECT_URL = 'logout'
 DEBUG = True
 
 import dj_database_url
@@ -156,3 +185,4 @@ import dj_database_url
 prod_db = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(prod_db)
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# __________________

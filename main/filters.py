@@ -8,6 +8,11 @@ from main.serializer import ProjectModelSerializer
 
 
 class ProjectsLanguageLevelFiltersView(ListAPIView):
+    '''
+    Класс выполняющий фильтрацию проектов с передаваемыми параметрами в url
+    Пример url: http://127.0.0.1:8000/api/projects/js/2/
+    Вернет все проекты с языком программирования js и уровнем 2.
+    '''
     serializer_class = ProjectModelSerializer
 
     def get_queryset(self):
