@@ -1,0 +1,16 @@
+{% extends 'main/base.html' %}
+{% block title %}Регистрация{% endblock %}
+
+{% block content %}
+    {% if form.errors %}
+        {{ form.errors|escape }}
+        <button type="button" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    {% endif %}
+    <form action="{% url 'users:register' %}" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input class="btn btn-primary btn-block" type="submit" value="Создать аккаунт">
+    </form>
+{% endblock %}

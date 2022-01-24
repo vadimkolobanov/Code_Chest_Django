@@ -5,6 +5,9 @@ from users.models import User
 
 
 class Project(models.Model):
+    '''
+    Модель продуктов
+    '''
     NO = 'Не выбрано'
     PYTHON = 'Python'
     JS = 'JS'
@@ -45,6 +48,12 @@ class Project(models.Model):
 
     def __str__(self) -> str:
         return f'Project {self.name} от {self.date_created}'
+
+
+class UserProjectCompleted(models.Model):
+    '''
+    Модель пользователей выполнившие проекты
+    '''
 
 
 class UserProjectCompleted(models.Model):
