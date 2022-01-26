@@ -1,0 +1,25 @@
+.media {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px 50px;
+    justify-content: center;
+    margin-top: 55px;
+}
+.media__item {
+    max-width: 340px;
+}
+.media__label img {
+    width: 40px;
+}
+.media__head {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+.media__link {
+    @include font-stack-2;
+}
+.media__body {
+    @include font-stack-3;
+    margin-top: 10px;
+}

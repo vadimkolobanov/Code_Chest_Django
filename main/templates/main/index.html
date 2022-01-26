@@ -1,0 +1,99 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'scss/main/index.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="substrate">
+        <div class="container">
+            <div class="bg-figures">
+                <img src="{% static 'images/main/rhombus.svg' %}" class="figures rhombus" alt="rhombus">
+                <img src="{% static 'images/main/cube.svg' %}" alt="cube" class="figures cube">
+                <img src="{% static 'images/main/figure.svg' %}" alt="figure" class="figures fig">
+            </div>
+            <div class="wrapper">
+                <header>
+                    <a href="#" class="logo"><img src="{% static 'images/main/Logo.svg' %}" alt="logo" class="logo--img"><img src="{% static 'images/main/code_logo.svg' %}" alt="logo" class="logo--code"></a>
+                    <div class="tagline">
+                        <p class="tagline__text">The best Telegram Bot for practice at coding and much more!</p>
+                        <p class="tagline__text">Find small project that suits for you and get better</p>
+                    </div>
+                    <a href="https://t.me/code_chest_bot" class="btn btn--main">See In Telegram</a>
+                </header>
+
+                <section class="media">
+                    <div class="media__item">
+                        <div class="media__head">
+                            <a href="#" class="media__label"><img src="{% static 'images/main/great_practice.svg' %}" alt="label"></a>
+                            <a href="#" class="media__link">Great Practice</a>
+                        </div>
+                        <div class="media__body">
+                            With us you can easily get ideas and plan for small projects, so you don’t need to find it by yourself and get a great practice!
+                        </div>
+                    </div>
+                    <div class="media__item">
+                        <div class="media__head">
+                            <a href="#" class="media__label"><img src="{% static 'images/main/track_progress.svg' %}" alt="label"></a>
+                            <a href="#" class="media__link">Track Progress</a>
+                        </div>
+                        <div class="media__body">
+                            Track your progress while building this simple projects. There’re a rating system so you’ll never be bored!
+                        </div>
+                    </div>
+                    <div class="media__item">
+                        <div class="media__head">
+                            <a href="#" class="media__label"><img src="{% static 'images/main/customize.svg' %}" alt="label"></a>
+                            <a href="#" class="media__link">Customize</a>
+                        </div>
+                        <div class="media__body">
+                            You can customize your profile and connect with other developers so you may even find your new co-worker
+                        </div>
+                    </div>
+                    <div class="media__item">
+                        <div class="media__head">
+                            <a href="#" class="media__label"><img src="{% static 'images/main/support.svg' %}" alt="label"></a>
+                            <a href="#" class="media__link">24/7 Support</a>
+                        </div>
+                        <div class="media__body">
+                            If you’ve got some trouble with  your project or something else you can easily write us and will help as soon as we can
+                        </div>
+                    </div>
+                    <div class="media__item">
+                        <div class="media__head">
+                            <a href="#" class="media__label"><img src="{% static 'images/main/languages.svg' %}" alt="label"></a>
+                            <a href="#" class="media__link">Languages</a>
+                        </div>
+                        <div class="media__body">
+                            You can choose between different Programming Languages like Python, JavaScript, Ruby and many others
+                        </div>
+                    </div>
+                    <div class="media__item">
+                        <div class="media__head">
+                            <a href="#" class="media__label"><img src="{% static 'images/main/build_yourself.svg' %}" alt="label"></a>
+                            <a href="#" class="media__link">Build Yourself</a>
+                        </div>
+                        <div class="media__body">
+                            Want to be part of our community? So you can easily create your own project and upload it, probably it will get much of popularity
+                        </div>
+                    </div>
+                </section>
+
+                <footer>
+                    <p>See Us On</p>
+                    <div class="social">
+                        <a href="#"><img src="{% static 'images/main/tiktok.svg' %}" alt="tiktok"></a>
+                        <a href="#"><img src="{% static 'images/main/twitter.svg' %}" alt="twitter"></a>
+                        <a href="#"><img src="{% static 'images/main/youtube.svg' %}" alt="youtube"></a>
+                        <a href="#"><img src="{% static 'images/main/discord.svg' %}" alt="discord"></a>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
