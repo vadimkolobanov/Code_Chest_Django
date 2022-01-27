@@ -1,0 +1,21 @@
+
+.logo {
+    width: fit-content;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+}
+.logo--img { width: 400px; }
+.logo--code {
+    position: absolute;
+    width: 41px;
+    left: 46px;
+    top: 2px;
+}
+.tagline {
+    margin: 10px 0 40px 0;
+}
+.tagline__text {
+    @include font-stack-1;
+}
+

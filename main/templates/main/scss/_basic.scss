@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Nunito';
+}
+
+.substrate {
+    background-color: $substrate-bg;
+    position: absolute;
+}
+.container {
+    position: static;
+    margin: $vertical_center $horizontal_center;
+    background-color: $container-bg;
+    border-radius: 15px;
+}
+.wrapper {
+    position: relative;
+    padding: $wrapper-padding 80px;
+}
+a {
+    text-decoration: none;
+}
+
+.figures {
+    position: absolute;
+}
+.rhombus {
+    top: 0;
+    left: 10px;
+    width: 450px;
+}
+.cube {
+    right: 48px;
+    top: 50px;
+    width: 350px;
+}
+.fig {
+    top: 157px;
+    right: 439px;
+    width: 305px;
+}
