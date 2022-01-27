@@ -1,0 +1,16 @@
+.btn {
+    display: block;
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: $btn-bg;
+    color: $text-color-1;
+    line-height: 40px;
+    margin: 0 auto;
+    text-align: center;
+}
+.btn--main {
+    &:hover {
+        background-color: #5486b2;
+    }
+}

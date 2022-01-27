@@ -1,0 +1,61 @@
+@media screen and (max-width: 1600px) {
+    .wrapper {
+        padding: 25px 40px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .bg-figures {
+        display: none;
+    }
+    .btn {
+        height: 30px;
+        line-height: 30px;
+        font-size: 14px;
+    }
+    .logo--img {
+        width: 230px;
+    }
+    .logo--code {
+        position: absolute;
+        width: 24px;
+        left: 26px;
+        top: 1px;
+    }
+    .media {
+        gap: 20px 20px;
+        margin-top: 30px;
+    }
+    .media__link {
+        font-size: 16px;
+    }
+    .media__body {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .tagline__text {
+        font-size: 14px;
+        line-height: 24px;
+    }
+    .tagline {
+        margin: 0px 0 20px 0;
+    }
+    .social {
+        max-width: 240px;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .wrapper {
+        padding: 15px 20px;
+    }
+    .media__item {
+        display: flex;
+        gap: 30px;
+        max-width: 100%;
+    }
+
+    .media {
+        flex-direction: column;
+    }
+}

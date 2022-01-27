@@ -1,0 +1,13 @@
+footer {
+    @include font-stack-2;
+    margin-top: 40px;
+}
+.social {
+    display: flex;
+    max-width: 300px;
+    justify-content: space-between;
+    margin: 20px auto;
+    img {
+        width: 45px;
+    }
+}

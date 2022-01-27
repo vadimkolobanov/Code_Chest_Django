@@ -5,6 +5,9 @@ from users.models import User
 
 
 class Project(models.Model):
+    '''
+    Модель продуктов
+    '''
     NO = 'Не выбрано'
     PYTHON = 'Python'
     JS = 'JS'
@@ -36,6 +39,7 @@ class Project(models.Model):
     date_created = models.DateTimeField(auto_now_add=True)
     id_telegram = models.CharField(max_length=15,verbose_name='ID_Телеграм', null=True, blank=True)
     username = models.CharField(max_length=30, verbose_name='Имя Телеграм', null=True, blank=True)
+    show_author = models.BooleanField(default=False, verbose_name='Показывать Автора')
     is_active = models.BooleanField(default=True, name='is_active')
 
     class Meta:
@@ -44,6 +48,12 @@ class Project(models.Model):
 
     def __str__(self) -> str:
         return f'Project {self.name} от {self.date_created}'
+
+
+class UserProjectCompleted(models.Model):
+    '''
+    Модель пользователей выполнившие проекты
+    '''
 
 
 class UserProjectCompleted(models.Model):
